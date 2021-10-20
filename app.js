@@ -8,6 +8,10 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/forside/index.html")
 })
 
+app.get('/terminal', (req, res) => {
+    res.sendFile(__dirname + "/public/terminal/terminal.html")
+})
+
 const PORT = process.env.PORT || 3000
 
 const server = app.listen(PORT, (error) => {
