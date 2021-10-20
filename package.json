@@ -1,0 +1,26 @@
+{
+  "name": "node-mandaroty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "cross-env NODE_ENV=DEV PORT=3000 nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulahiroble/node-mandaroty.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulahiroble/node-mandaroty/issues"
+  },
+  "homepage": "https://github.com/abdulahiroble/node-mandaroty#readme"
+}
