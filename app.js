@@ -16,6 +16,10 @@ app.get('/codesnippets', (req, res) => {
     res.sendFile(__dirname + "/public/codesnippets/codesnippets.html")
 })
 
+app.get('/tools', (req, res) => {
+    res.sendFile(__dirname + "/public/tools/tools.html")
+})
+
 
 const PORT = process.env.PORT || 3000
 
