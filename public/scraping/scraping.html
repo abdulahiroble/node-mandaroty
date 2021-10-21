@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Web scraping</title>
+  </head>
+  <body>
+    <div class="bg-blue-900 w-full">
+      <a href="/"
+        ><img class="w-44 mx-auto pt-3" src="/billeder/logo.svg" alt=""
+      /></a>
+      <div class="flex justify-around mt-5 pb-3 text-lg font-bold text-white">
+        <div class="bg-green-700 rounded-full py-3 px-5 hover:bg-green-800">
+          <a href="/terminal">Terminal kommandoer</a>
+        </div>
+        <div class="bg-green-700 rounded-full py-3 px-5 hover:bg-green-800">
+          <a href="/tools">Værktøjer</a>
+        </div>
+        <div class="bg-green-700 rounded-full py-3 px-5 hover:bg-green-800">
+          <a href="/teori">Teori</a>
+        </div>
+        <div class="bg-green-700 rounded-full py-3 px-5 hover:bg-green-800">
+          <a href="/codesnippets">Code snippets</a>
+        </div>
+        <div class="bg-green-700 rounded-full py-3 px-5 hover:bg-green-800">
+          <a href="/scraping">Bonus</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="background-color: #090c15" class="h-screen">
+      <div
+        class="text-5xl font-bold text-center pt-5 mb-5"
+        style="color: #659c5a"
+      >
+        Webscraping i Node JS
+      </div>
+
+      <div class="text-white text-xl text-left px-64">
+        Jeg har længe været interreseret i webscraping og da jeg fandt ud af man
+        kan scrape en hjemmeside med node js var det noget jeg gerne ville prøve
+        kræfter med. Troede det i starten kun var muligt ved brug af python.
+
+        <br /><br />
+
+        Jeg installere to npm pakker som er cheerio og axios. Cheerios bruges
+        til at parse HTML markup og dernæst give mulighed for at manipulere den
+        data vi scraper. Axios gør det muligt sende asynkrone HTTP kald til en
+        REST endpoint og udføre CRUD funktioner.
+
+        <br /><br />
+
+        I eksemplet under har jeg scrapet thehub som er en jobportal. Jeg har så
+        scrapet alle jobtitler ved først at trykke på inspekt og dernæst finde
+        det html element jeg skal bruge. I mit tilfælde var det et span tag hvor
+        jeg skulle have fat i dens klasse navn. Resultatet bliver dernæst vist i
+        terminalen.
+      </div>
+
+      <div class="flex justify-around mt-10 w-3/5 mx-auto">
+        <div class="mr-10">
+          <div class="text-white text-2xl mb-3 font-bold">Kode</div>
+          <img src="/billeder/hub.PNG" alt="" />
+        </div>
+        <div>
+          <div class="text-white text-2xl mb-3 font-bold">Terminal</div>
+          <img src="/billeder/scrao.PNG" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
