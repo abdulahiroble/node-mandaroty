@@ -1,6 +1,9 @@
 const express = require("express")
 const app = express();
 const path = require("path");
+const cheerio = require("cheerio");
+// const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+const axios = require("axios")
 
 app.use(express.static(path.join(__dirname, "public")))
 
@@ -23,6 +26,24 @@ app.get('/tools', (req, res) => {
 app.get('/teori', (req, res) => {
     res.sendFile(__dirname + "/public/teori/teori.html")
 })
+
+const url = "https://thehub.io/jobs"
+
+axios(url)
+    .then(response => {
+        const html = response.data
+        const $ = cheerio.load(html)
+        const titles = []
+
+        $('.card-job-find-list__position', html).each(function () {
+            const jobtitle = $(this).text()
+            // const url = $(this).find('span').attr('span')
+
+            titles.push({ jobtitle })
+        })
+
+        console.log(titles)
+    }).catch(err => console.log(err))
 
 
 const PORT = process.env.PORT || 3000
