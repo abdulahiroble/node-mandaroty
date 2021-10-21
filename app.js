@@ -27,6 +27,10 @@ app.get('/teori', (req, res) => {
     res.sendFile(__dirname + "/public/teori/teori.html")
 })
 
+app.get('/scraping', (req, res) => {
+    res.sendFile(__dirname + "/public/scraping/scraping.html")
+})
+
 const url = "https://thehub.io/jobs"
 
 axios(url)
@@ -37,7 +41,6 @@ axios(url)
 
         $('.card-job-find-list__position', html).each(function () {
             const jobtitle = $(this).text()
-            // const url = $(this).find('span').attr('span')
 
             titles.push({ jobtitle })
         })
