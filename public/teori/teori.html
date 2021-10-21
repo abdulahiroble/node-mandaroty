@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Teori</title>
+  </head>
+  <body>
+    <div class="bg-blue-900 w-full">
+      <img class="w-44 mx-auto pt-3" src="/billeder/logo.svg" alt="" />
+      <div class="flex justify-around mt-5 pb-3 text-lg font-bold text-white">
+        <div class="bg-green-700 rounded-full py-3 px-5 hover:bg-green-800">
+          <a href="/terminal">Terminal kommandoer</a>
+        </div>
+        <div class="bg-green-700 rounded-full py-3 px-5 hover:bg-green-800">
+          <a href="/tools">Værktøjer</a>
+        </div>
+        <div class="bg-green-700 rounded-full py-3 px-5 hover:bg-green-800">
+          <a href="#">Teori</a>
+        </div>
+        <div class="bg-green-700 rounded-full py-3 px-5 hover:bg-green-800">
+          <a href="/codesnippets">Code snippets</a>
+        </div>
+        <div class="bg-green-700 rounded-full py-3 px-5 hover:bg-green-800">
+          <a href="#">Bonus</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="background-color: #090c15" class="h-full">
+      <div
+        class="text-5xl font-bold text-center pt-5 mb-5"
+        style="color: #659c5a"
+      >
+        Teori
+      </div>
+
+      <div class="mx-20">
+        <div class="text-2xl text-white mb-3 font-bold">
+          Forskellige former for request
+        </div>
+
+        <table
+          class="
+            w-5/6
+            table-auto
+            border-collapse border border-blue-800
+            text-white
+            font-bold
+          "
+        >
+          <tr>
+            <th class="text-left border border-green-600">HTTP Method</th>
+            <th class="text-left border border-green-600">Endpoint</th>
+            <th class="text-left border border-green-600">What it does</th>
+          </tr>
+          <tr>
+            <td class="text-left border border-green-600">GET</td>
+            <td class="text-left border border-green-600">localhost:8080/</td>
+            <td class="text-left border border-green-600">
+              Retrieves anime website
+            </td>
+          </tr>
+          <tr>
+            <td class="text-left border border-green-600">GET</td>
+            <td class="text-left border border-green-600">
+              crunchyrool/anime/1
+            </td>
+            <td class="text-left border border-green-600">
+              Retrieves particular anime by id
+            </td>
+          </tr>
+          <tr>
+            <td class="text-left border border-green-600">POST</td>
+            <td class="text-left border border-green-600">
+              crunchyrool/anime/add
+            </td>
+            <td class="text-left border border-green-600">Adds a new anime</td>
+          </tr>
+          <tr>
+            <td class="text-left border border-green-600">PUT</td>
+            <td class="text-left border border-green-600">
+              crunchyrool/anime/1
+            </td>
+            <td class="text-left border border-green-600">
+              Update an existing anime
+            </td>
+          </tr>
+        </table>
+
+        <div class="mt-10 text-white">
+          <div class="mb-5">
+            <div class="text-xl font-bold text-white mb-3">GET</div>
+            <div>
+              GET request bruges til at hente data fra en specifik rource gennem
+              HTTP protokollen.
+            </div>
+
+            <div class="my-5">
+              <div class="text-xl font-bold text-white mb-3">POST</div>
+              <div>
+                POST request bruges til at sende data til en server for enten at
+                oprette eller opdatere en rource.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="text-xl font-bold text-white mb-3">PUT</div>
+            <div>
+              PUT request bruges til at sende data til en server for at oprette
+              eller opdatere en rource. <br />Forskellen mellem POST og PUT er
+              at PUT altid vil producere det samme resultat hvorimod POST vil
+              oprette den samme resource hvis du kalder POST flere gange.
+            </div>
+          </div>
+
+          <div class="my-5">
+            <div class="text-xl font-bold text-white mb-3">PATCH</div>
+            <div>
+              PATCH request bruges til at modificere dele af en resource og bør
+              ikke sammenlignes med PUT som er en komplet repræsentation af en
+              resource.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="text-xl font-bold text-white mb-3">DELETE</div>
+            <div>
+              DELETE request sletter en given resource, eksempelvis ud fra dens
+              id.
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-around mt-10 w-3/5 mx-auto">
+          <div>
+            <div class="text-white text-2xl mb-3 font-bold">
+              Get request example i Node JS
+            </div>
+            <img src="/billeder/get.PNG" alt="" />
+          </div>
+          <div>
+            <div class="text-white text-2xl mb-3 font-bold">
+              Post request example i Node JS
+            </div>
+            <img src="/billeder/posts.PNG" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
